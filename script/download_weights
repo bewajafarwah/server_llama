@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import shutil
 import sys
@@ -7,7 +9,9 @@ from transformers import  LlamaForCausalLM, LlamaTokenizer
 
 sys.path.append('.')
 
-from predict import MODEL_CACHE, MODEL_ID, auth_secret
+from predict import MODEL_CACHE, MODEL_ID
+
+auth_secret="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"
 
 if os.path.exists(MODEL_CACHE):
     shutil.rmtree(MODEL_CACHE)
